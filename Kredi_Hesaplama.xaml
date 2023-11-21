@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="görselÖdevDeneme.Kredi_Hesaplama"
+             Title="Kredi_Hesaplama">
+     <StackLayout>
+        <Label Text="Kredi Türü" />
+        <Picker x:Name="KrediTuruPicker">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>İhtiyaç Kredisi</x:String>
+                    <x:String>Konut Kredisi</x:String>
+                    <x:String>Taşıt Kredisi</x:String>
+                    <x:String>Ticari Kredi</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Label Text="Faiz Oranı (%)" />
+        <Entry x:Name="FaizOraniEntry" Placeholder="Faiz Oranını Girin" />
+
+        <Label Text="Kredi Tutarı" />
+        <Entry x:Name="KrediTutariEntry" Placeholder="Kredi Tutarını Girin" />
+
+        <Label Text="Vade Süresi (Ay)" />
+        <Entry x:Name="VadeSuresiEntry" Placeholder="Vade Süresini Girin" />
+
+        <Button Text="Hesapla" Background="Green" Clicked="HesaplaButton_Clicked" />
+
+        <Label x:Name="SonucLabel" Text="" />
+    </StackLayout>
+
+   
+</ContentPage>

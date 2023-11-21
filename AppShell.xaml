@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell
+    x:Class="GörselÖdev.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:GörselÖdev"
+    Shell.FlyoutBehavior="Flyout">
+
+    <ShellContent
+        Title="Ana Sayfa "
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+    <ShellContent
+      Title="Kredi Hesaplama"
+      ContentTemplate="{DataTemplate local:KrediHesaplama}"
+      Route="KrediHesaplama" />
+    <ShellContent
+      Title="Vücut Kitle İndexi"
+      ContentTemplate="{DataTemplate local:VucutKitleİndeksi}"
+      Route="VucutKitleİndeksi" />
+    <ShellContent
+      Title="Renk Seçici"
+      ContentTemplate="{DataTemplate local:RenkSecici}"
+      Route="RenkSecici" />
+    <ShellContent
+      Title="Yapılacaklar"
+      ContentTemplate="{DataTemplate local:Yapilacaklar}"
+      Route="Yapilacaklar" />
+
+</Shell>
+

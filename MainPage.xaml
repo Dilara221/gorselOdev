@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="görselÖdevDeneme.MainPage">
+    <VerticalStackLayout HorizontalOptions="Center" Background="White">
+        <Image Source="resim.png" HeightRequest="250" WidthRequest="400"/>
+        <Label Text="Dilara Aksakallı"  TextColor="Darkred"  FontSize="Large" HorizontalOptions="Center" />
+        <Label Text="Bartın Üniversitesi Bilgisayar Mühendisliği"  TextColor="Black"  FontSize="Medium" HorizontalOptions="Center" />
+        <Label Text="ÖDEV1" TextColor="DarkBlue" FontSize="Medium" HorizontalOptions="Center"/>
+
+    </VerticalStackLayout>
+
+        
+
+</ContentPage>
+

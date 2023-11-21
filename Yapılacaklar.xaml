@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="görselÖdevDeneme.Yapılacaklar"
+             Title="Yapılacaklar">
+
+    <StackLayout>
+        <Label Text="Yapılacaklar Listesi" FontSize="Large" TextColor="LightSeaGreen" HorizontalTextAlignment="Center"/>
+        <ListView x:Name="todoListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                           
+
+                            <CheckBox Grid.Column="0" IsChecked="{Binding IsCompleted}" />
+                            <Label Grid.Column="1" Text="{Binding Note}" VerticalTextAlignment="Center"/>
+                            <Button Grid.Column="2" Text="Sil" Clicked="DeleteButton_Clicked" />
+                            <Button Grid.Column="3" Text="Düzenle" Clicked="EditButton_Clicked" />
+                            <ImageButton/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="End" VerticalOptions="End">
+            
+            <Button Text="Ekle" Clicked="AddButton_Clicked" />
+            <Button Text="Kaydet" Clicked="SaveButton_Clicked" />
+        </StackLayout>
+
+    </StackLayout>
+</ContentPage>

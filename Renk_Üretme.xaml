@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="görselÖdevDeneme.Renk_Üretme"
+             Title="Renk_Üretme">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+          
+
+        </Grid.RowDefinitions>
+
+        <StackLayout Grid.Row="0">
+            <Label Text="Renk Seçici" FontSize="Large" TextColor="DarkKhaki" HorizontalTextAlignment="Center"/>
+
+            <Label Text="Kırmızı Tonu:" TextColor="Red" FontSize="Large"/>
+            <Slider x:Name="redSlider" Maximum="255" ValueChanged="Slider_ValueChanged" Margin="10" MinimumTrackColor="Red"/>
+         
+            <Label Text="Yeşil Tonu:" TextColor="Green" FontSize="Large"/>
+            <Slider x:Name="greenSlider" Maximum="255" ValueChanged="Slider_ValueChanged" Margin="10"  MinimumTrackColor="Green"/>
+           
+            <Label Text="Mavi Tonu:" TextColor="Blue" FontSize="Large"/>
+            <Slider x:Name="blueSlider" Maximum="255" ValueChanged="Slider_ValueChanged" Margin="10" MinimumTrackColor="Blue"/>
+            
+
+
+            <HorizontalStackLayout HorizontalOptions="Center">
+               
+                <Frame BackgroundColor="{DynamicResource PageBackgroundColor}" CornerRadius="5" Margin="10">
+                    <Label x:Name="hexLabel" Padding="10" HorizontalOptions="Center" FontSize="Large"/>
+                </Frame>
+                <ImageButton Source="kopyalama.jpg"
+                     HeightRequest="60"
+                     WidthRequest="60"
+                     Clicked="ImageButton_Clicked"/>
+            </HorizontalStackLayout>
+
+        
+            <Button Text="Random Renk" Clicked="RandomColorButton_Clicked" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+
+        <StackLayout Grid.Row="1" >
+          
+           
+                <Frame BackgroundColor="{Binding Source={x:Reference altRenkKutusu}, Path=Color}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <BoxView x:Name="altRenkKutusu" />
+                </Frame>
+           
+
+        </StackLayout>
+
+    </Grid>
+    
+</ContentPage>
